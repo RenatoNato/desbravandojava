@@ -26,8 +26,7 @@ public class CarrinhoDeComprasFinal {
         if (desconto > 1) desconto = 1;
 
         String tipo = livro.getClass().getSimpleName();
-        String nome = (livro.getNome() != null && !livro.getNome().isBlank())
-                ? livro.getNome() : "(sem nome)";
+        String nome = (livro.getNome() != null && !livro.getNome().isBlank()) ? livro.getNome() : "(sem nome)";
 
         double valorOriginal = livro.getValor();
         boolean aplicado = livro.aplicaDescontoDe(desconto);
@@ -64,7 +63,7 @@ public class CarrinhoDeComprasFinal {
     public double getTotalEconomizado() { return totalEconomizado; }
 
     public void imprimeResumo() {
-        System.out.println("=========== RESUMO ===========");
+        System.out.println("\n=========== RESUMO ===========");
         System.out.println("Itens:              " + itens);
         System.out.println("Valor bruto:        R$ " + DF.format(totalBruto));
         System.out.println("Descontos:          R$ " + DF.format(totalEconomizado));

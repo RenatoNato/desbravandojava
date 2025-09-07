@@ -21,11 +21,11 @@ public class Livro {
 
 	public boolean aplicaDescontoDe(double porcentagem) {
 		if (porcentagem > 0.3) {
-			System.out.println("Desconto NÃO aplicado no Livro (limite 30%)");
+			System.out.println("Desconto NÃO aplicado no Livro (limite 30%): \n");
 			return false;
 		}
 		this.valor -= this.valor * porcentagem;
-		System.out.println("Aplicando desconto no Livro");
+		System.out.println("Aplicando desconto no Livro: \n");
 		return true;
 	}
 
